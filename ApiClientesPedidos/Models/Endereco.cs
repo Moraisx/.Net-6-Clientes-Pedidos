@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace ApiClientesPedidos.Models
@@ -25,8 +26,9 @@ namespace ApiClientesPedidos.Models
         [StringLength(255)]
         [MaxLength(255)]
         public string? Cidade { get; set; }
+      
         public int ClienteId { get; set; }
-        
+
         [JsonIgnore]
         public Cliente? Cliente { get; set; }
     }
